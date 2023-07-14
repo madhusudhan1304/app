@@ -1,0 +1,185 @@
+{%extends "layout.html" %}
+{% block body %}
+
+<br /><br />
+<br /><br />
+
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Fertilizer Recommendation</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 65rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('ferti_predict') }}">
+    <div class="form-group">
+      <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Nitrogen"
+        name="nitrogen"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <br /><br />
+    <div class="form-group">
+      <label for="Phosphorous" style="font-size: 17px"
+        ><b>Phosphorous</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="Phosphorous"
+        name="phosphorous"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <br /><br />
+
+    <div class="form-group">
+      <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Pottasium"
+        name="pottasium"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <br /><br />
+    <div class="form-group">
+        <label for="Temperature" style="font-size: 17px"><b>Temperature</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Temperature"
+          name="Temperature"
+          placeholder="Enter the value (example:35)"
+          style="font-weight: bold"
+          required
+        />
+      </div>
+
+      <br /><br />
+      <div class="form-group">
+        <label for="Humidity" style="font-size: 17px"><b>Humidity</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Humidity"
+          name="Humidity"
+          placeholder="Enter the value (example:50)"
+          style="font-weight: bold"
+          required
+        />
+      </div>
+
+      <br /><br />
+      <div class="form-group">
+        <label for="Moisture" style="font-size: 17px"><b>Moisture</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Moisture"
+          name="Moisture"
+          placeholder="Enter the value (example:40)"
+          style="font-weight: bold"
+          required
+        />
+      </div>
+
+    <br /><br />
+
+    
+    <div class="form-group">
+        <label for="crop" style="font-size: 17px"
+          ><b>Soil Type</b></label
+        >
+        <select
+          name="soiltype"
+          class="form-control"
+          id="soil"
+          placeholder="Select soil type"
+          style="font-weight: bold"
+          required
+        >
+          <option selected>Select soil type</option>
+          <option>Black</option>
+          <option>Clayey</option>
+          <option>Loamy</option>
+          <option>Red</option>
+          <option>Sandy</option>
+
+        </select>
+      </div>
+
+
+    <br /><br />  
+
+    <div class="form-group">
+      <label for="crop" style="font-size: 17px"
+        ><b>Crop you want to grow</b></label
+      >
+      <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        placeholder="Select a crop"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>Select crop</option>
+        <option>Barley</option>
+        <option>Cotton</option>
+        <option>Ground Nuts</option>
+        <option>Maize</option>
+        <option>Millets</option>
+        <option>Oil seeds</option>
+        <option>Paddy</option>
+        <option>Pulses</option>
+        <option>Sugarcane</option>
+        <option>Tobacco</option>
+        <option>Wheat</option>
+
+      </select>
+    </div>
+
+
+    <br /><br />
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="
+          color: black;
+          font-weight: bold;
+          width: 130px;
+          height: 50px;
+          border-radius: 12px;
+          font-size: 21px;
+        "
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}

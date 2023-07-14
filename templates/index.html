@@ -1,0 +1,243 @@
+{%extends "layout.html" %}
+{% block body %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    
+                    <img class="w-100" src="{{ url_for('static', filename='css/img/cara1.jpg') }}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Smart Harvest</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{{ url_for('static', filename='css/img/cara2.jpg') }}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7">
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Smart Harvest</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <img class="w-100" src="{{ url_for('static', filename='css/img/cara3.jpg') }}" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7">
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Smart Harvest</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Top Feature Start -->
+    <div class="container-fluid top-feature py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                               <img src="{{ url_for('static', filename='data.png') }}" alt="Image">
+                            </div>
+                            <div class="ps-3">
+                                <h4>Data Driven Decisions</h4>
+                                <span>Take Best Decisions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <img src = {{ url_for('static', filename='AI.png') }} alt="Image">
+                            </div>
+                            <div class="ps-3">
+                                <h4>Driven by AI </h4>
+                                <span>Power of AI & ML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <img src="data:image/png;base64,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">
+
+                            </div>
+                            <div class="ps-3">
+                                <h4>Smart Farming</h4>
+                                <span>Best farming techniques for advanced productivity </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Feature End -->
+    
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-end">
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded" data-wow-delay="0.1s" src="{{ url_for('static', filename='css/img/about.jpg') }}">
+                </div>
+                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="display-3 mb-4">We help you in taking data-driven decisions</h1>
+                    <p class="mb-4">We provide the information you need to make informed decisions about your farming operation.</p>
+                    <p class="mb-4">Using Machine Learning and Deep Learning technologies to help you guide you through the farming process. Make informed decisions, understand the demographics of your area, factors that affect your crop, and how to keep it healthy.We believe that by incorporating technology into your farming operation, you can increase your yields and improve your overall profitability.</p>
+                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
+                </div>
+                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-5">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
+                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-4"> Because we focus on results. For us, it’s all about what adds value for you. </p>
+                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                            <i class="fa fa-check fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">100% Satisfaction</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                    <i class="fa fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="mb-0">Modern Technologies</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h2 class="fs-5 fw-bold text-primary">Our Applications</h2>
+                <h3 class="display-5 mb-5">Services That We Offer For You</h3>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="{{ url_for('static', filename='cropdisease.jpg') }}" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="{{ url_for('static', filename='css/img/icon/icon-6.png')}}" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Fertilizer Advice</h4>
+                            <p class="mb-4">Get fertilizer advice based on your soil NPK values.</p>
+                            <a class="btn btn-sm" href={{url_for('fertilizer')}}><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="{{ url_for('static', filename='fertilizerreco.jpg') }}" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="{{ url_for('static', filename='css/img/icon/icon-8.png') }}" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Fertilizer Recommendation</h4>
+                            <p class="mb-4">Get fertilzer recommendation for your crop based on weather and soil conditions.</p>
+                            <a class="btn btn-sm" href={{url_for('ferti')}}><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="{{ url_for('static', filename='cropyield.png') }}" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="{{ url_for('static', filename='css/img/icon/icon-7.png') }}" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Yield Prediction</h4>
+                            <p class="mb-4">Predict the crop yield based on soil, meteorological, environmental, and crop parameters.</p>
+                            <a class="btn btn-sm" href={{url_for('cropyield')}}><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+{% endblock %}
