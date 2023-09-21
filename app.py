@@ -118,13 +118,13 @@ ferti_dict = {0: '10-26-26', 1: '14-35-14', 2: '17-17-17', 3: '20-20', 4: '28-28
 
 # Loading crop yield prediction model
 
-# crop_yield_model_path = 'models/cropyielaptsmodel.pkl'
-# crop_yield_model = pickle.load(open(crop_yield_model_path, 'rb'))
+crop_yield_model_path = 'models/cropyielaptsmodel.pkl'
+crop_yield_model = pickle.load(open(crop_yield_model_path, 'rb'))
 
-# state_dict = {0: 'Andhra Pradesh', 1: 'Telangana '}
-# dist_dict = {0: 'ADILABAD', 1: 'ANANTAPUR', 2: 'CHITTOOR', 3: 'EAST GODAVARI', 4: 'GUNTUR', 5: 'HYDERABAD', 6: 'KADAPA', 7: 'KARIMNAGAR', 8: 'KHAMMAM', 9: 'KRISHNA', 10: 'KURNOOL', 11: 'MAHBUBNAGAR', 12: 'MEDAK', 13: 'NALGONDA', 14: 'NIZAMABAD', 15: 'PRAKASAM', 16: 'RANGAREDDI', 17: 'SPSR NELLORE', 18: 'SRIKAKULAM', 19: 'VISAKHAPATANAM', 20: 'VIZIANAGARAM', 21: 'WARANGAL', 22: 'WEST GODAVARI'}
-# season_dict = {0: 'Kharif     ', 1: 'Rabi       ', 2: 'Whole Year '}
-# cropname_dict = {0: 'Arecanut', 1: 'Arhar/Tur', 2: 'Bajra', 3: 'Banana', 4: 'Beans & Mutter(Vegetable)', 5: 'Bhindi', 6: 'Bottle Gourd', 7: 'Brinjal', 8: 'Cabbage', 9: 'Cashewnut', 10: 'Castor seed', 11: 'Citrus Fruit', 12: 'Coconut ', 13: 'Coriander', 14: 'Cotton(lint)', 15: 'Cowpea(Lobia)', 16: 'Cucumber', 17: 'Dry chillies', 18: 'Dry ginger', 19: 'Garlic', 20: 'Ginger', 21: 'Gram', 22: 'Grapes', 23: 'Groundnut', 24: 'Horse-gram', 25: 'Jowar', 26: 'Korra', 27: 'Lemon', 28: 'Linseed', 29: 'Maize', 30: 'Mango', 31: 'Masoor', 32: 'Mesta', 33: 'Moong(Green Gram)', 34: 'Niger seed', 35: 'Onion', 36: 'Orange', 37: 'Other  Rabi pulses', 38: 'Other Dry Fruit', 39: 'Other Fresh Fruits', 40: 'Other Kharif pulses', 41: 'Other Vegetables', 42: 'Papaya', 43: 'Peas  (vegetable)', 44: 'Pome Fruit', 45: 'Pome Granet', 46: 'Potato', 47: 'Ragi', 48: 'Rapeseed &Mustard', 49: 'Rice', 50: 'Safflower', 51: 'Samai', 52: 'Sapota', 53: 'Sesamum', 54: 'Small millets', 55: 'Soyabean', 56: 'Sugarcane', 57: 'Sunflower', 58: 'Sweet potato', 59: 'Tapioca', 60: 'Tobacco', 61: 'Tomato', 62: 'Turmeric', 63: 'Urad', 64: 'Varagu', 65: 'Wheat', 66: 'other fibres', 67: 'other misc. pulses', 68: 'other oilseeds'}
+state_dict = {0: 'Andhra Pradesh', 1: 'Telangana '}
+dist_dict = {0: 'ADILABAD', 1: 'ANANTAPUR', 2: 'CHITTOOR', 3: 'EAST GODAVARI', 4: 'GUNTUR', 5: 'HYDERABAD', 6: 'KADAPA', 7: 'KARIMNAGAR', 8: 'KHAMMAM', 9: 'KRISHNA', 10: 'KURNOOL', 11: 'MAHBUBNAGAR', 12: 'MEDAK', 13: 'NALGONDA', 14: 'NIZAMABAD', 15: 'PRAKASAM', 16: 'RANGAREDDI', 17: 'SPSR NELLORE', 18: 'SRIKAKULAM', 19: 'VISAKHAPATANAM', 20: 'VIZIANAGARAM', 21: 'WARANGAL', 22: 'WEST GODAVARI'}
+season_dict = {0: 'Kharif     ', 1: 'Rabi       ', 2: 'Whole Year '}
+cropname_dict = {0: 'Arecanut', 1: 'Arhar/Tur', 2: 'Bajra', 3: 'Banana', 4: 'Beans & Mutter(Vegetable)', 5: 'Bhindi', 6: 'Bottle Gourd', 7: 'Brinjal', 8: 'Cabbage', 9: 'Cashewnut', 10: 'Castor seed', 11: 'Citrus Fruit', 12: 'Coconut ', 13: 'Coriander', 14: 'Cotton(lint)', 15: 'Cowpea(Lobia)', 16: 'Cucumber', 17: 'Dry chillies', 18: 'Dry ginger', 19: 'Garlic', 20: 'Ginger', 21: 'Gram', 22: 'Grapes', 23: 'Groundnut', 24: 'Horse-gram', 25: 'Jowar', 26: 'Korra', 27: 'Lemon', 28: 'Linseed', 29: 'Maize', 30: 'Mango', 31: 'Masoor', 32: 'Mesta', 33: 'Moong(Green Gram)', 34: 'Niger seed', 35: 'Onion', 36: 'Orange', 37: 'Other  Rabi pulses', 38: 'Other Dry Fruit', 39: 'Other Fresh Fruits', 40: 'Other Kharif pulses', 41: 'Other Vegetables', 42: 'Papaya', 43: 'Peas  (vegetable)', 44: 'Pome Fruit', 45: 'Pome Granet', 46: 'Potato', 47: 'Ragi', 48: 'Rapeseed &Mustard', 49: 'Rice', 50: 'Safflower', 51: 'Samai', 52: 'Sapota', 53: 'Sesamum', 54: 'Small millets', 55: 'Soyabean', 56: 'Sugarcane', 57: 'Sunflower', 58: 'Sweet potato', 59: 'Tapioca', 60: 'Tobacco', 61: 'Tomato', 62: 'Turmeric', 63: 'Urad', 64: 'Varagu', 65: 'Wheat', 66: 'other fibres', 67: 'other misc. pulses', 68: 'other oilseeds'}
 
 
 ###################### APP ROutes #######################
@@ -232,9 +232,24 @@ def ferti_predict():
 def cropyield():
     title = 'Harvestify - Crop Yield Prediction'
     return render_template("yield.html")
-# @app.route('/yield-predict', methods=['POST'])
-# def yield_predict():
-#     return render_template('yield-result.html')
+@app.route('/yield-predict', methods=['POST'])
+def yield_predict():
+    state = str(request.form['state'])
+    district = str(request.form['District'])
+    season = str(request.form['Season'])
+    crop = str(request.form['cropname'])
+    area = str(request.form['area'])
+    state = next((k for k, v in state_dict.items() if v == state), None)
+    district = next((k for k, v in dist_dict.items() if v == district), None)
+    season = next((k for k, v in season_dict.items() if v == season), None)
+    crop = next((k for k, v in crop_dict.items() if v == crop), None)
+ 
+    data = np.array([[state, district, season, crop, area]])
+    print(data)
+    yield_result = crop_yield_model.predict(data)
+    final_prediction = round(yield_result[0],2)
+
+    return render_template('yield-result.html')
 
 
 
