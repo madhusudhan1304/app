@@ -118,7 +118,7 @@ ferti_dict = {0: '10-26-26', 1: '14-35-14', 2: '17-17-17', 3: '20-20', 4: '28-28
 
 # Loading crop yield prediction model
 
-crop_yield_model_path = 'models/cropyielaptsmodel.pkl'
+crop_yield_model_path = 'models/YieldDecisionTree.pkl'
 crop_yield_model = pickle.load(open(crop_yield_model_path, 'rb'))
 
 state_dict = {0: 'Andhra Pradesh', 1: 'Telangana '}
